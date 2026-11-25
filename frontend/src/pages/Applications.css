@@ -1,0 +1,393 @@
+
+.applications-page {
+  padding: 40px;
+  background: #f4f7fb;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.applications-page h1,
+.applications-page h2 {
+  color: #172554;
+}
+
+.page-subtitle {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+/* FORM AND APPLICATION CARDS */
+
+.application-form-card,
+.application-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.application-form-card {
+  max-width: 650px;
+  width: 100%;
+  margin: 25px auto;
+}
+
+.application-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.application-form-card label {
+  color: #334155;
+  font-weight: bold;
+}
+
+.application-form-card input,
+.application-form-card select,
+.application-form-card textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.application-form-card button {
+  padding: 13px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.application-form-card button:hover {
+  background: #1d4ed8;
+}
+
+.application-form-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* APPLICATION STATUS */
+
+.status-label {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin: 8px 0;
+}
+
+.application-card h3 {
+  color: #172554;
+}
+
+.application-card p {
+  color: #64748b;
+}
+
+.applications-list {
+  max-width: 1200px;
+  width: 100%;
+  margin: 30px auto;
+}
+
+/* APPLICATION ACTIONS */
+
+.application-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.application-actions button,
+.cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-button {
+  background: #2563eb;
+}
+
+.delete-button {
+  background: #dc2626;
+}
+
+.cancel-button {
+  background: #64748b;
+}
+
+/* SEARCH AND FILTER */
+
+.application-filters {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.application-filters input,
+.application-filters select {
+  padding: 12px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  background: white;
+  outline: none;
+}
+
+.application-filters input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.application-filters select {
+  min-width: 180px;
+  cursor: pointer;
+}
+
+.application-filters input:focus,
+.application-filters select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* APPLICATION HEADING AND VIEW TOGGLE */
+
+.applications-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.applications-heading h2 {
+  margin-bottom: 5px;
+}
+
+.applications-heading p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 8px;
+  background: white;
+  padding: 5px;
+  border-radius: 9px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.view-toggle button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #475569;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.view-toggle button.active-view {
+  background: #2563eb;
+  color: white;
+}
+
+.view-toggle button:hover:not(.active-view) {
+  background: #eff6ff;
+}
+
+/* KANBAN BOARD */
+
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(220px, 1fr));
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 2px 20px;
+  align-items: start;
+}
+
+.kanban-column {
+  background: #eaf0f8;
+  border-radius: 12px;
+  padding: 14px;
+  min-height: 250px;
+  min-width: 220px;
+}
+
+.kanban-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d5deeb;
+}
+
+.kanban-column-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #172554;
+}
+
+.kanban-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.kanban-count {
+  background: white;
+  color: #334155;
+  padding: 4px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.kanban-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kanban-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.kanban-card h4 {
+  color: #172554;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.kanban-card p {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.kanban-date {
+  display: block;
+  color: #64748b;
+  font-size: 11px;
+  margin-bottom: 15px;
+}
+
+.kanban-card label {
+  display: block;
+  color: #475569;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.kanban-card select {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: white;
+  color: #334155;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.kanban-card select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.kanban-card small {
+  display: block;
+  color: #2563eb;
+  margin-top: 7px;
+}
+
+.kanban-card .application-actions {
+  gap: 8px;
+}
+
+.kanban-card .application-actions button {
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.kanban-empty {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 13px;
+  padding: 25px 5px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+  .applications-page {
+    padding: 25px;
+  }
+
+  .kanban-board {
+    grid-template-columns: repeat(5, 220px);
+  }
+}
+
+@media (max-width: 500px) {
+  .applications-page {
+    padding: 16px;
+  }
+
+  .application-form-card {
+    padding: 18px;
+  }
+
+  .applications-heading {
+    align-items: flex-start;
+  }
+
+  .view-toggle {
+    width: 100%;
+  }
+
+  .view-toggle button {
+    flex: 1;
+    padding: 10px 7px;
+    font-size: 12px;
+  }
+
+  .application-filters {
+    flex-direction: column;
+  }
+
+  .application-filters input,
+  .application-filters select {
+    width: 100%;
+  }
+
+  .kanban-board {
+    grid-template-columns: repeat(5, 220px);
+  }
+}
